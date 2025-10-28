@@ -1,59 +1,97 @@
-body{
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  background-color: black;
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1a1a1a, #2c3e50);
   display: flex;
   justify-content: center;
   height: 100vh;
   align-items: center;
+  margin: 0;
 }
 
-.container{
-  background-color:aquamarine;
+.container {
+  background: rgba(255, 255, 255, 0.95);
   padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 0 5px white;
-  width: 400px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  width: 450px;
   text-align: center;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease;
 }
 
-h1{
-  color:darkslategrey;
+.container:hover {
+  transform: translateY(-5px);
+}
+
+h1 {
+  color: #2c3e50;
   margin-bottom: 30px;
+  font-size: 2.2em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-#taskList{
+#taskList {
   list-style: none;
   padding: 0;
-  margin-bottom: 6px;
+  margin-bottom: 20px;
 }
 
-#taskList li{
-  padding: 10px;
-  margin: 5px, 5px;
-  background-color: azure;
-  border-radius: 5px;
+#taskList li {
+  padding: 15px;
+  margin: 10px 0;
+  background: #f8f9fa;
+  border-radius: 10px;
   position: relative;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid #3498db;
 }
 
-#startBtn{
-  background-color:darkslategrey;
+#taskList li:hover {
+  transform: translateX(5px);
+  background: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#startBtn {
+  background: linear-gradient(135deg, #3498db, #2980b9);
   border: none;
-  padding: 9px;
-  border-radius: 3px;
-  box-shadow: 0 0 3px black;
-  color: aliceblue;
+  padding: 12px 25px;
+  border-radius: 25px;
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+  color: white;
   cursor: pointer;
+  font-size: 1em;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
 }
 
-#startBtn:hover{
-  background-color:aliceblue;
-  color: darkslategrey;
+#startBtn:hover {
+  background: linear-gradient(135deg, #2980b9, #3498db);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
 }
 
-.info{
-  color:lightseagreen;
+#startBtn:active {
+  transform: translateY(0);
 }
 
-#status{
-  color: black;
+.info {
+  color: #2980b9;
+  font-size: 0.9em;
+  margin: 15px 0;
+  font-style: italic;
+}
+
+#status {
+  color: #2c3e50;
+  font-weight: 500;
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  background: rgba(52, 152, 219, 0.1);
 }
